@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        Css - Week 2</title>
+    <style>
+        body {
+            font-size: 16px;
+            font-family: "Segoe UI", sans-serif;
+            background: #f5f5f5;
+            margin: 0;
+        }
+        .container {
+            display: block;
+            width: 70%;
+            margin: 0 auto;
+        }
+        .row {
+            width: 100%;
+            display: block;/*block, flex, grid*/
+        }
+        .col {
+            width: 100%;
+            display: block;
+        }
+        .col.col-6 {
+            width: 50%;
+            margin: 0 auto;
+            display: block;
+        }
+        .info {
+            background: #2c796a;
+            color: #ffffff;
+            width: 100%;
+            box-sizing: border-box;
+            padding: 15px 25px;
+            text-align: justify-all;
+            margin-bottom: 15px;
+            border-radius: 4px;
+        }
+        .form-input {
+            display: block;
+            width: 100%;
+            box-sizing: border-box;
+            margin: 10px auto;
+        }
+        .form-input label {
+            display: block;
+            width: 100%;
+            font-weight: 600;
+        }
+        .form-input .input {
+            width: 100%;
+            display: block;
+            box-sizing: border-box;
+            border: 1px solid #cccccc;
+            border-radius: 4px;
+            margin-top: 10px;
+            font-family: inherit;
+            font-size: inherit;
+            padding: 5px 15px;
+        }
+        .form-input input[data-input="cm"] {
+            height: 40px;
+        }
+        .button {
+            border: none;
+            background: #236d59;
+            border-radius: 4px;
+            padding: 12px 25px;
+            text-transform: uppercase;
+            color: #ffffff;
+            font-weight: 600;
+            cursor: pointer;
+            font-family: inherit;
+            font-size: inherit;
+        }
+        .button:hover {
+            background: #1f635a;
+        }
+        /*This is media query that makes our page
+        responsive on every screen size.
+        */
+        @media (max-width: 768px) {
+            .container {
+                width: 90%;
+            }
+            .col.col-6 {
+                width: 100%;
+            }
+        }
+        /*
+        TODO: Add more media queries
+         */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col col-6">
+                <h2>Welcome to my site</h2>
+                <div class="info">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, accusantium, adipisci alias architecto asperiores earum fugit in ipsa itaque magnam nam nesciunt omnis perspiciatis provident quasi repudiandae sint veritatis vitae?
+                </div>
+                <form action="">
+                    <div class="form-input">
+                        <label for="">Full Name</label>
+                        <input type="text" data-input="cm"
+                               name=""
+                               class="input"
+                               placeholder="e.g Josiah Yahaya"
+                               id="">
+                    </div>
+                    <div class="form-input">
+                        <label for="">Email</label>
+                        <input type="email"
+                               name=""
+                               data-input="cm"
+                               class="input"
+                               placeholder="e.g josiah@gmail.com"
+                               id="">
+                    </div>
+                    <div class="form-input">
+                        <label for="">Message</label>
+                        <textarea
+                                name="message"
+                                class="input"
+                                id=""
+                                placeholder="Your message"
+                                cols="6"
+                                rows="6"></textarea>
+                    </div>
+                    <br/>
+                    <div class="form-input">
+                        <button type="submit"
+                                class="button green">Send Message</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
